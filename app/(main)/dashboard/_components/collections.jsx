@@ -3,10 +3,9 @@
 import React, { useState, useEffect } from "react";
 import { createCollection } from "@/actions/collection";
 import { toast } from "sonner";
-
+import CollectionPreview from "./collection-preview";
 import CollectionForm from "@/components/collection-form";
 import useFetch from "@/hooks/use-fetch";
-import CollectionPreview from "./CollectionPreview";
 
 const Collections = ({ collections = [], entriesByCollection }) => {
   const [isCollectionDialogOpen, setIsCollectionDialogOpen] = useState(false);
