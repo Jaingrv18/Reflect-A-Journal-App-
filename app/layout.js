@@ -13,6 +13,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children , pageProps}) {
+
+  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   return (
     <ClerkProvider
     // appearance={{
@@ -31,7 +33,7 @@ export default function RootLayout({ children , pageProps}) {
     //   },
     // }}
     {...pageProps}
-    publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+    publishableKey={publishableKey}
     >
       <html lang="en">
         <body
