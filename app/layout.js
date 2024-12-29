@@ -12,7 +12,7 @@ export const metadata = {
   description: "",
 };
 
-export default function RootLayout({ children , pageProps}) {
+export default function RootLayout({ children}) {
 
   const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   return (
@@ -32,7 +32,7 @@ export default function RootLayout({ children , pageProps}) {
     //     headerSubtitle: "text-gray-400",
     //   },
     // }}
-    {...pageProps}
+    
     publishableKey={publishableKey}
     >
       <html lang="en">
