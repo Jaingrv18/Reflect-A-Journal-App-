@@ -12,7 +12,7 @@ export const metadata = {
   description: "",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children , pageProps}) {
   return (
     <ClerkProvider
     // appearance={{
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     //     headerSubtitle: "text-gray-400",
     //   },
     // }}
-    
+    {...pageProps}
     publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
     >
       <html lang="en">
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
 
           <footer className="bg-orange-300 py-12 bg-opacity-10">
             <div className="container mx-auto px-4 text-center text-gray-900">
-              <p>Made with 💗 by RoadsideCoder</p>
+              <p>Copyright@2024</p>
             </div>
           </footer>
         </body>
